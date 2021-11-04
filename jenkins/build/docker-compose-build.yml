@@ -3,7 +3,7 @@ services:
   flaskapiuser:
     container_name: flaskapiuser
     image: flaskapiuser
-    build: ./web
+    build: /var/jenkins_home/workspace/Flaskapimongodb/jenkins/build/web
     ports:
       - "5000:5000"
     networks:
@@ -11,7 +11,7 @@ services:
   mongodb:
     container_name: mongodb
     image: mongodb
-    build: ./db
+    build: /var/jenkins_home/workspace/Flaskapimongodb/jenkins/build/db
     ports:
       - "27017:27017"
     networks:
