@@ -12,7 +12,7 @@ import bcrypt
 app = Flask(__name__)
 api = Api(app)
 
-client = MongoClient("mongodb://127.0.0.1:27017")
+client = MongoClient("mongodb://ip-10-0-3-228.ap-southeast-1.compute.internal:27017")
 db = client.SentencesDatabase
 users = db["Users"]
 
