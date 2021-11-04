@@ -1,0 +1,20 @@
+version: '3'
+services:
+  flaskapiuser:
+    container_name: flaskapiuser
+    image: flaskapiuser
+    build: ./web
+    ports:
+      - "5000:5000"
+    networks:
+      - net
+  mongodb:
+    container_name: mongodb
+    image: mongodb
+    build: ./db
+    ports:
+      - "27017:27017"
+    networks:
+      - net
+networks:
+  net:
